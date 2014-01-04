@@ -19,8 +19,8 @@
 @mixin clearfix() {
   &:before,
   &:after {
-    content: " "; // 1
-    display: table; // 2
+    content: " "; /* 1 */
+    display: table; /* 2 */
   }
   &:after {
     clear: both;
@@ -30,7 +30,7 @@
 // WebKit-style focus
 @mixin tab-focus() {
   // Default
-  outline: thin dotted;
+  outline: thin dotted #333;
   // WebKit
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
@@ -55,8 +55,7 @@
 // Placeholder text
 @mixin placeholder($color: $input-color-placeholder) {
   &:-moz-placeholder            { color: $color; } // Firefox 4-18
-  &::-moz-placeholder           { color: $color;   // Firefox 19+
-                                  opacity: 1; } // See https://github.com/twbs/bootstrap/pull/11526
+  &::-moz-placeholder           { color: $color; } // Firefox 19+
   &:-ms-input-placeholder       { color: $color; } // Internet Explorer 10+
   &::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
 }
@@ -88,7 +87,11 @@
 }
 // New mixin to use as of v3.0.1
 @mixin text-hide() {
-  @include hide-text();
+  font: #{0/0} a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
 }
 
 
@@ -125,7 +128,7 @@
   -webkit-transition: $transition;
           transition: $transition;
 }
-@mixin transition-property($transition-property...) {
+@mixin transition-property($transition-property) {
   -webkit-transition-property: $transition-property;
           transition-property: $transition-property;
 }
@@ -133,7 +136,7 @@
   -webkit-transition-delay: $transition-delay;
           transition-delay: $transition-delay;
 }
-@mixin transition-duration($transition-duration...) {
+@mixin transition-duration($transition-duration) {
   -webkit-transition-duration: $transition-duration;
           transition-duration: $transition-duration;
 }
@@ -274,8 +277,10 @@
 // Creates two color stops, start and end, by specifying a color and position for each color stop.
 // Color stops are not available in IE9 and below.
 @mixin gradient-horizontal($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
-  background-image: -webkit-linear-gradient(left, color-stop($start-color $start-percent), color-stop($end-color $end-percent)); // Safari 5.1-6, Chrome 10+
-  background-image:  linear-gradient(to right, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-image: -webkit-gradient(linear, $start-percent top, $end-percent top, from($start-color), to($end-color)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(left, color-stop($start-color $start-percent), color-stop($end-color $end-percent)); // Safari 5.1+, Chrome 10+
+  background-image: -moz-linear-gradient(left, $start-color $start-percent, $end-color $end-percent); // FF 3.6+
+  background-image:  linear-gradient(to right, $start-color $start-percent, $end-color $end-percent); // Standard, IE10
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down
 }
@@ -285,36 +290,47 @@
 // Creates two color stops, start and end, by specifying a color and position for each color stop.
 // Color stops are not available in IE9 and below.
 @mixin gradient-vertical($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
-  background-image: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Safari 5.1-6, Chrome 10+
-  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-image: -webkit-gradient(linear, left $start-percent, left $end-percent, from($start-color), to($end-color)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent); // Safari 5.1+, Chrome 10+
+  background-image:  -moz-linear-gradient(top, $start-color $start-percent, $end-color $end-percent); // FF 3.6+
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down
 }
 
 @mixin gradient-directional($start-color: #555, $end-color: #333, $deg: 45deg) {
   background-repeat: repeat-x;
-  background-image: -webkit-linear-gradient($deg, $start-color, $end-color); // Safari 5.1-6, Chrome 10+
-  background-image: linear-gradient($deg, $start-color, $end-color); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-image: -webkit-linear-gradient($deg, $start-color, $end-color); // Safari 5.1+, Chrome 10+
+  background-image: -moz-linear-gradient($deg, $start-color, $end-color); // FF 3.6+
+  background-image: linear-gradient($deg, $start-color, $end-color); // Standard, IE10
 }
 @mixin gradient-horizontal-three-colors($start-color: #00b3ee, $mid-color: #7a43b6, $color-stop: 50%, $end-color: #c3325f) {
+  background-image: -webkit-gradient(left, linear, 0 0, 0 100%, from($start-color), color-stop($color-stop, $mid-color), to($end-color));
   background-image: -webkit-linear-gradient(left, $start-color, $mid-color $color-stop, $end-color);
+  background-image: -moz-linear-gradient(left, $start-color, $mid-color $color-stop, $end-color);
   background-image: linear-gradient(to right, $start-color, $mid-color $color-stop, $end-color);
   background-repeat: no-repeat;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down, gets no color-stop at all for proper fallback
 }
 @mixin gradient-vertical-three-colors($start-color: #00b3ee, $mid-color: #7a43b6, $color-stop: 50%, $end-color: #c3325f) {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($start-color), color-stop($color-stop, $mid-color), to($end-color));
   background-image: -webkit-linear-gradient($start-color, $mid-color $color-stop, $end-color);
+  background-image: -moz-linear-gradient(top, $start-color, $mid-color $color-stop, $end-color);
   background-image: linear-gradient($start-color, $mid-color $color-stop, $end-color);
   background-repeat: no-repeat;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down, gets no color-stop at all for proper fallback
 }
 @mixin gradient-radial($inner-color: #555, $outer-color: #333) {
+  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from($inner-color), to($outer-color));
   background-image: -webkit-radial-gradient(circle, $inner-color, $outer-color);
+  background-image: -moz-radial-gradient(circle, $inner-color, $outer-color);
   background-image: radial-gradient(circle, $inner-color, $outer-color);
   background-repeat: no-repeat;
 }
 @mixin gradient-striped($color: rgba(255,255,255,.15), $angle: 45deg) {
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, $color), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, $color), color-stop(.75, $color), color-stop(.75, transparent), to(transparent));
   background-image: -webkit-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
   background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
 }
 
@@ -333,7 +349,7 @@
 // Short retina mixin for setting background-image and -size
 
 @mixin img-retina($file-1x, $file-2x, $width-1x, $height-1x) {
-  background-image: url(if($bootstrap-sass-asset-helper, twbs-image-path("#{$file-1x}"), "#{$file-1x}"));
+  background-image: image-url("#{$file-1x}");
 
   @media
   only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -342,7 +358,7 @@
   only screen and (        min-device-pixel-ratio: 2),
   only screen and (                min-resolution: 192dpi),
   only screen and (                min-resolution: 2dppx) {
-    background-image: url(if($bootstrap-sass-asset-helper, twbs-image-path("#{$file-2x}"), "#{$file-2x}"));
+    background-image: image-url("#{$file-2x}");
     background-size: $width-1x $height-1x;
   }
 }
@@ -385,6 +401,9 @@
     + .panel-collapse .panel-body {
       border-top-color: $border;
     }
+    & > .dropdown .caret {
+      border-color: $heading-text-color transparent;
+    }
   }
   & > .panel-footer {
     + .panel-collapse .panel-body {
@@ -410,27 +429,27 @@
 
 // Tables
 // -------------------------
-@mixin table-row-variant($state, $background) {
+@mixin table-row-variant($state, $background, $border) {
   // Exact selectors below required to override `.table-striped` and prevent
   // inheritance to nested tables.
-  .table {
-    > thead,
-    > tbody,
-    > tfoot {
-      > tr > .#{$state},
-      > .#{$state} > td,
-      > .#{$state} > th {
-        background-color: $background;
-      }
+  .table > thead > tr,
+  .table > tbody > tr,
+  .table > tfoot > tr {
+    > td.#{$state},
+    > th.#{$state},
+    &.#{$state} > td,
+    &.#{$state} > th {
+      background-color: $background;
     }
   }
 
   // Hover states for `.table-hover`
   // Note: this is not available for cells or rows within `thead` or `tfoot`.
-  .table-hover > tbody {
-    > tr > .#{$state}:hover,
-    > .#{$state}:hover > td,
-    > .#{$state}:hover > th {
+  .table-hover > tbody > tr {
+    > td.#{$state}:hover,
+    > th.#{$state}:hover,
+    &.#{$state}:hover > td,
+    &.#{$state}:hover > th {
       background-color: darken($background, 5%);
     }
   }
@@ -476,11 +495,6 @@
       background-color: $background;
           border-color: $border;
     }
-  }
-
-  .badge {
-    color: $background;
-    background-color: #fff;
   }
 }
 
@@ -553,10 +567,9 @@
 // [converter] $parent hack
 @mixin responsive-visibility($parent) {
   #{$parent} { display: block !important; }
-  table#{$parent}  { display: table; }
-  tr#{$parent}     { display: table-row !important; }
+  tr#{$parent} { display: table-row !important; }
   th#{$parent},
-  td#{$parent}     { display: table-cell !important; }
+  td#{$parent} { display: table-cell !important; }
 }
 
 // [converter] $parent hack

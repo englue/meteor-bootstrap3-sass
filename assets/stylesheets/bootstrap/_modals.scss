@@ -35,8 +35,10 @@
 // Shell div to position the modal with bottom padding
 .modal-dialog {
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
   width: auto;
-  margin: 10px;
+  padding: 10px;
   z-index: ($zindex-modal-background + 10);
 }
 
@@ -120,7 +122,8 @@
 
   .modal-dialog {
     width: 600px;
-    margin: 30px auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   .modal-content {
     @include box-shadow(0 5px 15px rgba(0,0,0,.5));
