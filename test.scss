@@ -1,0 +1,9 @@
+@import "bootstrap";
+
+.test-screen-xs-width {
+	width: $screen-xs-min;
+}
+
+.test-btn-extended {
+	@extend .btn;
+}
