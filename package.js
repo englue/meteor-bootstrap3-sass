@@ -17,6 +17,13 @@ Package.on_use(function (api) {
         "assets/javascripts/bootstrap/tooltip.js",
         "assets/javascripts/bootstrap/popover.js"
     ], "client");
+
+    api.add_files([
+        "assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
+        "assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
+        "assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
+        "assets/fonts/bootstrap/glyphicons-halflings-regular.woff"
+    ], "client");
 });
 
 Package.on_test(function(api) {

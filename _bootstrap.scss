@@ -1,4 +1,8 @@
-$icon-font-path: '/packages/bootstrap2-sass/assets/fonts/bootstrap/';
+$icon-font-path: '/packages/bootstrap3-sass/assets/fonts/bootstrap/';
+
+@function font-url($url){
+    @return url('#{$url}')
+}
 
 // Core variables and mixins
 @import "assets/stylesheets/bootstrap/variables";
