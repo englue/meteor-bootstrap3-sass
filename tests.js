@@ -1,4 +1,4 @@
-Tinytest.add("Bootstrap SCSS variables should be available", function(test) {
+Tinytest.add("bootstrap3-sass - SCSS variables should be available", function(test) {
     var onscreenDiv = OnscreenDiv(Meteor.render(function() {
         return '<div class="test-screen-xs-width"></div>';
     }));
@@ -10,7 +10,7 @@ Tinytest.add("Bootstrap SCSS variables should be available", function(test) {
     onscreenDiv.kill();
 });
 
-Tinytest.add("Bootstrap SCSS class should be extendable", function(test) {
+Tinytest.add("bootstrap3-sass - SCSS class should be extendable", function(test) {
     var onscreenDiv = OnscreenDiv(Meteor.render(function() {
         return '<a class="test-btn-extended"></a>';
     }));
@@ -23,7 +23,7 @@ Tinytest.add("Bootstrap SCSS class should be extendable", function(test) {
     onscreenDiv.kill();
 });
 
-Tinytest.add("Bootstrap jQuery extensions should be loaded", function(test) {
+Tinytest.add("bootstrap3-sass - jQuery extensions should be loaded", function(test) {
     test.isTrue(typeof $.fn.affix !== 'undefined');
     test.isTrue(typeof $.fn.alert !== 'undefined');
     test.isTrue(typeof $.fn.button !== 'undefined');
