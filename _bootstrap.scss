@@ -1,7 +1,7 @@
 $icon-font-path: '/packages/bootstrap3-sass/assets/fonts/bootstrap/';
 
 @function font-url($url){
-    @return url('#{$url}')
+	@return url('#{$url}')
 }
 
 // Core variables and mixins
