@@ -31,7 +31,7 @@ Package.on_test(function(api) {
     api.use(["scss", "tinytest", "test-helpers"]);
 
     api.add_files([
-            "test.scss",
-            "test.js"
+            "tests.scss",
+            "tests.js"
         ], "client");
 });
