@@ -3,6 +3,8 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
+	api.use("scss");
+
 	api.add_files([
 		"assets/javascripts/bootstrap/affix.js",
 		"assets/javascripts/bootstrap/alert.js",
