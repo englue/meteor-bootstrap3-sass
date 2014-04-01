@@ -3,7 +3,7 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
-	api.use("scss");
+	api.use(["jquery", "scss"]);
 
 	api.add_files([
 		"assets/javascripts/bootstrap/affix.js",
