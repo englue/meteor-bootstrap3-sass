@@ -1,26 +1,21 @@
 Tinytest.add("bootstrap3-sass - SCSS variables should be available", function(test) {
-	var onscreenDiv = OnscreenDiv(Meteor.render(function() {
-		return '<div class="test-screen-xs-width"></div>';
-	}));
+	console.log(Template);
+	var $div = $('<div class="test-screen-xs-width"></div>');
+	$('body').append($div);
 
-	var styledDiv = onscreenDiv.div.firstChild;
+	test.equal(getStyleProperty($div[0], "width"), "480px");
 
-	test.equal(getStyleProperty(styledDiv, "width"), "480px");
-
-	onscreenDiv.kill();
+	$div.remove();
 });
 
 Tinytest.add("bootstrap3-sass - SCSS class should be extendable", function(test) {
-	var onscreenDiv = OnscreenDiv(Meteor.render(function() {
-		return '<a class="test-btn-extended"></a>';
-	}));
+	var $div = $('<div class="test-btn-extended"></div>');
+	$('body').append($div);
 
-	var styledDiv = onscreenDiv.div.firstChild;
+	test.equal(getStyleProperty($div[0], "display"), "inline-block");
+	test.equal(getStyleProperty($div[0], "text-align"), "center");
 
-	test.equal(getStyleProperty(styledDiv, "display"), "inline-block");
-	test.equal(getStyleProperty(styledDiv, "text-align"), "center");
-
-	onscreenDiv.kill();
+	$div.remove();
 });
 
 Tinytest.add("bootstrap3-sass - jQuery extensions should be loaded", function(test) {
