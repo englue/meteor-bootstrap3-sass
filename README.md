@@ -6,8 +6,11 @@ Meteor package for Bootstrap 3 with Sass support
 To install
 ----------
 
+In addition to the bootstrap3-sass package, you must explicitly install the scss package. Meteor will not compile your `*.scss` files otherwise.
+
 ```sh
 $ mrt add bootstrap3-sass
+$ mrt add scss
 ```
 
 To use
