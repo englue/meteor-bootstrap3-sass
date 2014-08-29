@@ -1,6 +1,6 @@
-$icon-font-path: '/packages/bootstrap3-sass/assets/fonts/bootstrap/';
+$icon-font-path: '/packages/reywood:bootstrap3-sass/assets/fonts/bootstrap/';
 
-@function font-url($url){
+@function font-url($url) {
 	@return url('#{$url}')
 }
 
