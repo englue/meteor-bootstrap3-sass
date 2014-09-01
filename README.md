@@ -16,7 +16,7 @@ To use
 To activate bootstrap styles on your site, add the following line to the top of your main scss file:
 
 ```scss
-@import '.meteor/local/build/programs/server/assets/packages/reywood:bootstrap3-sass/bootstrap';
+@import '.meteor/local/build/programs/server/assets/packages/reywood:bootstrap3-sass/_bootstrap.scss'
 ```
 
 Be sure to add a viewport meta tag to your document `<head>` somewhere in your HTML. Where you add this is dependent on how your meteor project is structured.
