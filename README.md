@@ -19,10 +19,21 @@ To activate bootstrap styles on your site, add the following line to the top of 
 @import '.meteor/local/build/programs/server/assets/packages/reywood:bootstrap3-sass/bootstrap';
 ```
 
-Be sure to add a viewport meta tag to your document `<head>` somewhere in your HTML. Where you add this is dependent on how your meteor project is structured.
+Depending on your system, you may have to replace the `:` in the above path with `_`.
+
+Be sure to add the appropriate tags (as [recommended by Bootstrap](http://getbootstrap.com/getting-started/#template)) to your document `<head>` somewhere in your HTML. Where you add these tags is dependent on how your meteor project is structured.
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
 ```
 
 --------------------------------------------------------
