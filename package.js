@@ -1,12 +1,12 @@
 Package.describe({
 	name: "reywood:bootstrap3-sass",
 	summary: "Bootstrap 3 with Sass support",
-	version: "3.1.6",
+	version: "3.1.7",
 	git: "https://github.com/englue/meteor-bootstrap3-sass.git"
 });
 
 Package.onUse(function (api) {
-	api.versionsFrom("METEOR@0.9.0");
+	api.versionsFrom("METEOR@0.9.2");
 
 	api.use("jquery");
 	api.use("fourseven:scss@0.9.5", ["server"]);
