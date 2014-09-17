@@ -1,7 +1,7 @@
-$icon-font-path: '/packages/reywood:bootstrap3-sass/assets/fonts/bootstrap/';
+$icon-font-path: '/packages/reywood_bootstrap3-sass/assets/fonts/bootstrap/';
 
 @function font-url($url) {
-	@return url('#{$url}')
+	@return url('#{$url}');
 }
 
 // Core variables and mixins
