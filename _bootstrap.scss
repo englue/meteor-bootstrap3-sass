@@ -8,9 +8,10 @@ $icon-font-path: '/packages/reywood_bootstrap3-sass/assets/fonts/bootstrap/';
 @import "assets/stylesheets/bootstrap/variables";
 @import "assets/stylesheets/bootstrap/mixins";
 
-// Reset
+// Reset and dependencies
 @import "assets/stylesheets/bootstrap/normalize";
 @import "assets/stylesheets/bootstrap/print";
+@import "assets/stylesheets/bootstrap/glyphicons";
 
 // Core CSS
 @import "assets/stylesheets/bootstrap/scaffolding";
@@ -23,7 +24,6 @@ $icon-font-path: '/packages/reywood_bootstrap3-sass/assets/fonts/bootstrap/';
 
 // Components
 @import "assets/stylesheets/bootstrap/component-animations";
-@import "assets/stylesheets/bootstrap/glyphicons";
 @import "assets/stylesheets/bootstrap/dropdowns";
 @import "assets/stylesheets/bootstrap/button-groups";
 @import "assets/stylesheets/bootstrap/input-groups";
@@ -41,6 +41,7 @@ $icon-font-path: '/packages/reywood_bootstrap3-sass/assets/fonts/bootstrap/';
 @import "assets/stylesheets/bootstrap/media";
 @import "assets/stylesheets/bootstrap/list-group";
 @import "assets/stylesheets/bootstrap/panels";
+@import "assets/stylesheets/bootstrap/responsive-embed";
 @import "assets/stylesheets/bootstrap/wells";
 @import "assets/stylesheets/bootstrap/close";
 

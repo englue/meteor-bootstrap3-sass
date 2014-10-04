@@ -1,7 +1,7 @@
 Package.describe({
 	name: "reywood:bootstrap3-sass",
 	summary: "Bootstrap 3 with Sass support",
-	version: "3.1.7",
+	version: "3.2.0_1",
 	git: "https://github.com/englue/meteor-bootstrap3-sass.git"
 });
 
@@ -13,18 +13,7 @@ Package.onUse(function (api) {
 	api.imply("fourseven:scss", ["server"]);
 
 	api.addFiles([
-		"assets/javascripts/bootstrap/affix.js",
-		"assets/javascripts/bootstrap/alert.js",
-		"assets/javascripts/bootstrap/button.js",
-		"assets/javascripts/bootstrap/carousel.js",
-		"assets/javascripts/bootstrap/collapse.js",
-		"assets/javascripts/bootstrap/dropdown.js",
-		"assets/javascripts/bootstrap/tab.js",
-		"assets/javascripts/bootstrap/transition.js",
-		"assets/javascripts/bootstrap/scrollspy.js",
-		"assets/javascripts/bootstrap/modal.js",
-		"assets/javascripts/bootstrap/tooltip.js",
-		"assets/javascripts/bootstrap/popover.js"
+		"assets/javascripts/bootstrap.js"
 	], "client");
 
 	api.addFiles([
@@ -65,6 +54,7 @@ Package.onUse(function (api) {
 		"assets/stylesheets/bootstrap/_popovers.scss",
 		"assets/stylesheets/bootstrap/_print.scss",
 		"assets/stylesheets/bootstrap/_progress-bars.scss",
+		"assets/stylesheets/bootstrap/_responsive-embed.scss",
 		"assets/stylesheets/bootstrap/_responsive-utilities.scss",
 		"assets/stylesheets/bootstrap/_scaffolding.scss",
 		"assets/stylesheets/bootstrap/_tables.scss",
@@ -74,7 +64,36 @@ Package.onUse(function (api) {
 		"assets/stylesheets/bootstrap/_type.scss",
 		"assets/stylesheets/bootstrap/_utilities.scss",
 		"assets/stylesheets/bootstrap/_variables.scss",
-		"assets/stylesheets/bootstrap/_wells.scss"
+		"assets/stylesheets/bootstrap/_wells.scss",
+		"assets/stylesheets/bootstrap/mixins/_alerts.scss",
+		"assets/stylesheets/bootstrap/mixins/_background-variant.scss",
+		"assets/stylesheets/bootstrap/mixins/_border-radius.scss",
+		"assets/stylesheets/bootstrap/mixins/_buttons.scss",
+		"assets/stylesheets/bootstrap/mixins/_center-block.scss",
+		"assets/stylesheets/bootstrap/mixins/_clearfix.scss",
+		"assets/stylesheets/bootstrap/mixins/_forms.scss",
+		"assets/stylesheets/bootstrap/mixins/_gradients.scss",
+		"assets/stylesheets/bootstrap/mixins/_grid-framework.scss",
+		"assets/stylesheets/bootstrap/mixins/_grid.scss",
+		"assets/stylesheets/bootstrap/mixins/_hide-text.scss",
+		"assets/stylesheets/bootstrap/mixins/_image.scss",
+		"assets/stylesheets/bootstrap/mixins/_labels.scss",
+		"assets/stylesheets/bootstrap/mixins/_list-group.scss",
+		"assets/stylesheets/bootstrap/mixins/_nav-divider.scss",
+		"assets/stylesheets/bootstrap/mixins/_nav-vertical-align.scss",
+		"assets/stylesheets/bootstrap/mixins/_opacity.scss",
+		"assets/stylesheets/bootstrap/mixins/_pagination.scss",
+		"assets/stylesheets/bootstrap/mixins/_panels.scss",
+		"assets/stylesheets/bootstrap/mixins/_progress-bar.scss",
+		"assets/stylesheets/bootstrap/mixins/_reset-filter.scss",
+		"assets/stylesheets/bootstrap/mixins/_resize.scss",
+		"assets/stylesheets/bootstrap/mixins/_responsive-visibility.scss",
+		"assets/stylesheets/bootstrap/mixins/_size.scss",
+		"assets/stylesheets/bootstrap/mixins/_tab-focus.scss",
+		"assets/stylesheets/bootstrap/mixins/_table-row.scss",
+		"assets/stylesheets/bootstrap/mixins/_text-emphasis.scss",
+		"assets/stylesheets/bootstrap/mixins/_text-overflow.scss",
+		"assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss"
 	], "server");
 });
 
