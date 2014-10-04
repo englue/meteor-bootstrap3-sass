@@ -1,7 +1,7 @@
 Package.describe({
 	name: "reywood:bootstrap3-sass",
 	summary: "Bootstrap 3 with Sass support",
-	version: "3.2.0_1",
+	version: "3.2.0_2",
 	git: "https://github.com/englue/meteor-bootstrap3-sass.git"
 });
 
