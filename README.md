@@ -8,7 +8,7 @@ Meteor package for Bootstrap 3 with Sass support
 To install
 ----------
 
-Select and install an SCSS compiler package. These include `fourseven:scss`, `stevezhu:sass`, etc. Then install the `reywood:bootstrap3-sass` package.
+Select and install an SCSS compiler package. These include `fourseven:scss`, `stevezhu:sass`, etc. Then, install the `reywood:bootstrap3-sass` package.
 
 ```sh
 $ meteor add fourseven:scss
