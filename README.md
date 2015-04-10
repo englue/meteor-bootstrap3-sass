@@ -1,6 +1,8 @@
 meteor-bootstrap3-sass
 ======================
 
+[![Build Status](https://travis-ci.org/englue/meteor-bootstrap3-sass.svg?branch=master)](https://travis-ci.org/englue/meteor-bootstrap3-sass)
+
 Meteor package for Bootstrap 3 with Sass support
 
 **IMPORTANT UPDATE:** As of version 3.3.4_2, the `fourseven:scss` package is no longer automatically installed with this package. This allows projects to choose which SCSS compiler package they would like to use.
