@@ -1,7 +1,7 @@
 Package.describe({
 	name: 'reywood:bootstrap3-sass',
 	summary: 'Bootstrap 3 with Sass support',
-	version: '3.3.4_4',
+	version: '3.3.5_1',
 	git: 'https://github.com/englue/meteor-bootstrap3-sass.git'
 });
 
@@ -85,6 +85,7 @@ Package.onUse(function (api) {
 		'assets/stylesheets/bootstrap/mixins/_panels.scss',
 		'assets/stylesheets/bootstrap/mixins/_progress-bar.scss',
 		'assets/stylesheets/bootstrap/mixins/_reset-filter.scss',
+		'assets/stylesheets/bootstrap/mixins/_reset-text.scss',
 		'assets/stylesheets/bootstrap/mixins/_resize.scss',
 		'assets/stylesheets/bootstrap/mixins/_responsive-visibility.scss',
 		'assets/stylesheets/bootstrap/mixins/_size.scss',
