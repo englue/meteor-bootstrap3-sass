@@ -99,7 +99,7 @@ Package.onUse(function (api) {
 
 Package.onTest(function(api) {
 	api.use('reywood:bootstrap3-sass');
-	api.use(['fourseven:scss', 'tinytest', 'test-helpers']);
+	api.use(['fourseven:scss@3.2.0', 'tinytest', 'test-helpers']);
 
 	api.addFiles([
 		'tests.scss',
