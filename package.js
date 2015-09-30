@@ -1,20 +1,24 @@
 Package.describe({
 	name: 'reywood:bootstrap3-sass',
 	summary: 'Bootstrap 3 with Sass support',
-	version: '3.3.5_1',
+	version: '3.3.5_2',
 	git: 'https://github.com/englue/meteor-bootstrap3-sass.git'
 });
 
 Package.onUse(function (api) {
-	api.versionsFrom('METEOR@1.0');
+	api.versionsFrom('METEOR@1.2');
 
-	api.use('jquery');
+	api.use([
+		'meteor',
+		'jquery',
+		'fourseven:scss@3.3.3'
+	]);
 
 	api.addFiles([
 		'assets/javascripts/bootstrap.js'
 	], 'client');
 
-	api.addFiles([
+	api.addAssets([
 		'assets/fonts/bootstrap/glyphicons-halflings-regular.eot',
 		'assets/fonts/bootstrap/glyphicons-halflings-regular.svg',
 		'assets/fonts/bootstrap/glyphicons-halflings-regular.ttf',
@@ -94,12 +98,17 @@ Package.onUse(function (api) {
 		'assets/stylesheets/bootstrap/mixins/_text-emphasis.scss',
 		'assets/stylesheets/bootstrap/mixins/_text-overflow.scss',
 		'assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss'
-	], 'server');
+	], 'client');
 });
 
 Package.onTest(function(api) {
 	api.use('reywood:bootstrap3-sass');
-	api.use(['fourseven:scss@3.2.0', 'tinytest', 'test-helpers']);
+	api.use([
+		'fourseven:scss@3.3.3',
+		'jquery',
+		'tinytest',
+		'test-helpers'
+	]);
 
 	api.addFiles([
 		'tests.scss',

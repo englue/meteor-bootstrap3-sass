@@ -5,12 +5,10 @@ meteor-bootstrap3-sass
 
 Meteor package for Bootstrap 3 with Sass support
 
-**IMPORTANT UPDATE:** As of version 3.3.4_2, the `fourseven:scss` package is no longer automatically installed with this package. This allows projects to choose which SCSS compiler package they would like to use.
-
 To install
 ----------
 
-Select and install an SCSS compiler package. These include `fourseven:scss`, `stevezhu:sass`, etc. Then, install the `reywood:bootstrap3-sass` package.
+Install the `fourseven:scss` SCSS compiler package and the `reywood:bootstrap3-sass` package.
 
 ```sh
 $ meteor add fourseven:scss
@@ -23,10 +21,8 @@ To use
 To activate bootstrap styles on your site, add the following line to the top of your main scss file:
 
 ```scss
-@import '.meteor/local/build/programs/server/assets/packages/reywood_bootstrap3-sass/bootstrap';
+@import '{reywood:bootstrap3-sass}/bootstrap';
 ```
-
-Due to a current limitation of the Meteor packaging system, the above path may not exist the first time you run your Meteor app after installing this package. This will cause an error saying the file to import was not found. This may also occur if you run `meteor reset`. Restarting your app should fix this problem. See [meteor/meteor#2606](https://github.com/meteor/meteor/issues/2606) and [meteor/meteor#2796](https://github.com/meteor/meteor/issues/2796) for more info.
 
 Be sure to add the appropriate tags (as [recommended by Bootstrap](http://getbootstrap.com/getting-started/#template)) to your document `<head>` somewhere in your HTML. Where you add these tags is dependent on how your meteor project is structured.
 

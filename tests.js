@@ -1,5 +1,4 @@
 Tinytest.add("bootstrap3-sass - SCSS variables should be available", function(test) {
-	console.log(Template);
 	var $div = $('<div class="test-screen-xs-width"></div>');
 	$('body').append($div);
 

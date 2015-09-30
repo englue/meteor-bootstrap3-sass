@@ -5,52 +5,52 @@ $icon-font-path: '/packages/reywood_bootstrap3-sass/assets/fonts/bootstrap/' !de
 }
 
 // Core variables and mixins
-@import "assets/stylesheets/bootstrap/variables";
-@import "assets/stylesheets/bootstrap/mixins";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/variables";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/mixins";
 
 // Reset and dependencies
-@import "assets/stylesheets/bootstrap/normalize";
-@import "assets/stylesheets/bootstrap/print";
-@import "assets/stylesheets/bootstrap/glyphicons";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/normalize";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/print";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/glyphicons";
 
 // Core CSS
-@import "assets/stylesheets/bootstrap/scaffolding";
-@import "assets/stylesheets/bootstrap/type";
-@import "assets/stylesheets/bootstrap/code";
-@import "assets/stylesheets/bootstrap/grid";
-@import "assets/stylesheets/bootstrap/tables";
-@import "assets/stylesheets/bootstrap/forms";
-@import "assets/stylesheets/bootstrap/buttons";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/scaffolding";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/type";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/code";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/grid";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/tables";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/forms";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/buttons";
 
 // Components
-@import "assets/stylesheets/bootstrap/component-animations";
-@import "assets/stylesheets/bootstrap/dropdowns";
-@import "assets/stylesheets/bootstrap/button-groups";
-@import "assets/stylesheets/bootstrap/input-groups";
-@import "assets/stylesheets/bootstrap/navs";
-@import "assets/stylesheets/bootstrap/navbar";
-@import "assets/stylesheets/bootstrap/breadcrumbs";
-@import "assets/stylesheets/bootstrap/pagination";
-@import "assets/stylesheets/bootstrap/pager";
-@import "assets/stylesheets/bootstrap/labels";
-@import "assets/stylesheets/bootstrap/badges";
-@import "assets/stylesheets/bootstrap/jumbotron";
-@import "assets/stylesheets/bootstrap/thumbnails";
-@import "assets/stylesheets/bootstrap/alerts";
-@import "assets/stylesheets/bootstrap/progress-bars";
-@import "assets/stylesheets/bootstrap/media";
-@import "assets/stylesheets/bootstrap/list-group";
-@import "assets/stylesheets/bootstrap/panels";
-@import "assets/stylesheets/bootstrap/responsive-embed";
-@import "assets/stylesheets/bootstrap/wells";
-@import "assets/stylesheets/bootstrap/close";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/component-animations";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/dropdowns";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/button-groups";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/input-groups";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/navs";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/navbar";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/breadcrumbs";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/pagination";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/pager";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/labels";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/badges";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/jumbotron";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/thumbnails";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/alerts";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/progress-bars";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/media";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/list-group";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/panels";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/responsive-embed";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/wells";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/close";
 
 // Components w/ JavaScript
-@import "assets/stylesheets/bootstrap/modals";
-@import "assets/stylesheets/bootstrap/tooltip";
-@import "assets/stylesheets/bootstrap/popovers";
-@import "assets/stylesheets/bootstrap/carousel";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/modals";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/tooltip";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/popovers";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/carousel";
 
 // Utility classes
-@import "assets/stylesheets/bootstrap/utilities";
-@import "assets/stylesheets/bootstrap/responsive-utilities";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/utilities";
+@import "{reywood:bootstrap3-sass}/assets/stylesheets/bootstrap/responsive-utilities";
