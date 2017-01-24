@@ -11,7 +11,7 @@ Package.onUse(function (api) {
 	api.use([
 		'meteor',
 		'jquery',
-		'fourseven:scss'
+		'fourseven:scss@3.4.3'
 	]);
 
 	api.addFiles([
@@ -104,7 +104,7 @@ Package.onUse(function (api) {
 Package.onTest(function(api) {
 	api.use('reywood:bootstrap3-sass');
 	api.use([
-		'fourseven:scss',
+		'fourseven:scss@3.4.3',
 		'jquery',
 		'tinytest',
 		'test-helpers'
