@@ -1,9 +1,13 @@
-@import '{reywood:bootstrap3-sass}/bootstrap';
+@import "{reywood:bootstrap3-sass}/bootstrap";
 
 .test-screen-xs-width {
-	width: $screen-xs-min;
+  width: $screen-xs-min;
 }
 
 .test-btn-extended {
-	@extend .btn;
+  @extend .btn;
+}
+
+.test-button-variant {
+  @include button-variant(#000, #fff, #888);
 }
